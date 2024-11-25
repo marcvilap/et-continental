@@ -1,0 +1,60 @@
+---
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+
+interface Props {
+	video: string
+	title: string
+	subtitle: string
+	description: string
+}
+
+const { video, title, subtitle, description } = Astro.props
+---
+
+<Layout>
+	<section class="reveal relative bg-black/60 text-white">
+		<video class="absolute left-0 top-0 -z-10 size-full object-cover" src={video} autoplay loop muted playsinline></video>
+		<div class="container flex min-h-screen flex-col pb-24 pt-20">
+			<a class="grid self-start text-xs" href="/">
+				<strong>En ruta hacia…</strong>
+				<span>Un proyecto de</span>
+				<Icon class="mt-2 w-40" name="continental" />
+			</a>
+			<div class="m-auto grid max-w-md gap-8 text-center">
+				<h1 class="font-serif text-5xl text-[#FCB134] reveal:translate-y-48 reveal:opacity-0 revealed:delay-200">{title}</h1>
+				<h2 class="text-3xl font-bold text-white reveal:translate-y-48 reveal:opacity-0 revealed:delay-400">{subtitle}</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-image bg-[#F8EFE0] bg-cover bg-center">
+		<div class="container py-24">
+			<div class="reveal">
+				<p class="mx-auto max-w-lg text-pretty text-center font-bold reveal:translate-y-48 reveal:opacity-0">{description}</p>
+			</div>
+			<slot />
+			<div class="mt-48">
+				<p class="mb-4 text-center text-sm">Eltiempo Content para</p>
+				<Icon class="mx-auto w-48" name="continental" />
+			</div>
+			<div class="container">
+				<ul class="c1 my-8 flex justify-center gap-8 text-xs">
+					<li>
+						<a href="https://www.eltiempo.es/legal/politica-privacidad.html">Política de Privacidad</a>
+					</li>
+					<li>
+						<a href="https://www.eltiempo.es/legal/condiciones-generales.html">Aviso legal</a>
+					</li>
+					<li>
+						<a href="https://www.eltiempo.es/legal/politica-cookies.html">Política de Cookies</a>
+					</li>
+				</ul>
+
+				<p class="mt-8 text-center text-xs">
+					<a href="https://www.eltiempo.es/">© El tiempo, Pelmorex Weather Networks 2024</a>
+				</p>
+			</div>
+		</div>
+	</section>
+</Layout>

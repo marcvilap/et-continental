@@ -1,0 +1,55 @@
+---
+import LayoutPage from '$layouts/LayoutPage.astro'
+import BlockSplit from '$components/BlockSplit.astro'
+import video from '$assets/videos/video-03.mp4'
+import img05 from '$assets/images/05.jpg'
+import img06 from '$assets/images/06.gif'
+import img03 from '$assets/images/03.gif'
+import img04 from '$assets/images/04.png'
+---
+
+<LayoutPage {video} title="Carretera bajo la lluvia" subtitle="Viaja en coche con la mayor seguridad" description="El mal tiempo puede convertir cualquier trayecto en un desafío. La lluvia reduce la tracción, el frío afecta la flexibilidad de los neumáticos y la nieve puede hacer que pierdas el control si no estás preparado. En estas condiciones, tu seguridad depende directamente de la elección de los neumáticos y de cómo los mantengas.">
+	<BlockSplit image={img05} title="Neumáticos para condiciones adversas" reverse>
+		<ul class="grid list-disc gap-4 pl-6">
+			<li><strong class="text-[#729BD6]">PremiumContact:</strong> Su diseño adaptativo garantiza un excelente frenado y agarre en carreteras mojadas, ideal para la lluvia.</li>
+			<li><strong class="text-[#729BD6]">SportContact 7:</strong> Si buscas un rendimiento superior, este modelo ofrece estabilidad y control incluso en condiciones húmedas.</li>
+			<li><a rel="sponsored" class="font-bold text-[#729BD6] underline" target="_blank" href="https://www.continental-neumaticos.es/b2c/car/tires/wintercontact-ts-870/">WinterContact TS 870:</a> La mejor opción para nieve y temperaturas bajo cero, con una tracción excepcional en superficies heladas.</li>
+			<li><strong class="text-[#729BD6]">AllSeasonContact 2:</strong> Una solución versátil para todo el año, diseñados para mantener el agarre y la estabilidad en climas fríos, lluviosos e incluso nevadas ligeras.</li>
+		</ul>
+	</BlockSplit>
+
+	<BlockSplit image={img06} title="Consejos para condiciones adversas">
+		<ol class="grid list-decimal gap-4 pl-6">
+			<li>
+				<strong>Conducir bajo la lluvia:</strong>
+				<ul class="mt-4 grid list-disc gap-4 pl-6">
+					<li>Reduce la velocidad y aumenta la distancia de seguridad para evitar accidentes.</li>
+					<li>Verifica la profundidad de la banda de rodadura, ya que un grosor inferior a 3 mm incrementa el riesgo de aquaplaning.</li>
+					<li>Mantén los neumáticos correctamente inflados para mejorar el contacto con la carretera.</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Conducir en frío extremo o nieve:</strong>
+				<ul class="mt-4 grid list-disc gap-4 pl-6">
+					<li>Acelera suavemente y utiliza marchas largas para evitar que las ruedas patinen.</li>
+					<li>Mantén una mayor distancia de frenado, ya que las superficies heladas reducen la capacidad de detener el vehículo.</li>
+					<li>Revisa la presión de los neumáticos con frecuencia, ya que el frío tiende a disminuirla.</li>
+				</ul>
+			</li>
+		</ol>
+	</BlockSplit>
+
+	<BlockSplit image={img03} title="Prevención y mantenimiento en cualquier clima" reverse>
+		<p>Los neumáticos especializados de Continental, como el UltraContact o el EcoContact 6, ofrecen durabilidad y rendimiento constante, lo que los hace ideales tanto para el uso diario como para enfrentar condiciones climáticas cambiantes. Mantenerlos en buen estado es esencial para tu seguridad:</p>
+		<ul class="grid list-disc gap-4 pl-6">
+			<li>Inspecciona periódicamente en busca de cortes o abultamientos.</li>
+			<li>Revisa su estado antes de viajes largos o durante cambios de estación.</li>
+			<li>No esperes a notar desgaste excesivo para reemplazarlos.</li>
+		</ul>
+	</BlockSplit>
+
+	<BlockSplit image={img04} title="No lo olvides: tu seguridad depende de tus neumáticos">
+		<p>El clima puede cambiar, pero tu preparación no debería hacerlo. Desde días de buen tiempo hasta condiciones adversas, los neumáticos son tu mejor herramienta para enfrentar cualquier trayecto. Con opciones de alta calidad como las que ofrece <strong>Continental</strong> y siguiendo estos consejos, estarás preparado para conducir con seguridad, confort y eficiencia, sin importar lo que te depare la carretera.</p>
+		<p>Haz de tus neumáticos tus aliados y convierte cada viaje en una experiencia segura y placentera.</p>
+	</BlockSplit>
+</LayoutPage>

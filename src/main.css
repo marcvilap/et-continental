@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'TT Wellingtons Trial';
+		font-style: normal;
+		font-weight: 400;
+		font-display: 'swap';
+		src: url(./assets/fonts/TT-Wellingtons-Trial-Regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'TT Wellingtons Trial';
+		font-style: normal;
+		font-weight: 500;
+		font-display: 'swap';
+		src: url(./assets/fonts/TT-Wellingtons-Trial-Medium.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'TT Wellingtons Trial';
+		font-style: normal;
+		font-weight: 700;
+		font-display: 'swap';
+		src: url(./assets/fonts/TT-Wellingtons-Trial-Bold.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Protest Guerrilla';
+		font-style: normal;
+		font-weight: 400;
+		font-display: 'swap';
+		src: url(./assets/fonts/Protest-Guerrilla-Regular.woff2) format('woff2');
+	}
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		@apply touch-manipulation font-medium antialiased;
+	}
+}
+
+@layer components {
+	.revealed [class*='reveal:'] {
+		transition-duration: 0.75s;
+		transition-property: opacity, transform;
+		transition-timing-function: ease-out;
+		will-change: opacity, transform;
+	}
+}
+
+@layer utilities {
+	.bg-image {
+		background-image: url(./assets/images/bg.webp);
+	}
+}

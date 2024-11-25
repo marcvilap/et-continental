@@ -1,0 +1,43 @@
+---
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import video01 from '$assets/videos/video-01.mp4'
+import video02 from '$assets/videos/video-02.mp4'
+import video03 from '$assets/videos/video-03.mp4'
+---
+
+<Layout>
+	<section class="reveal relative bg-black/60 text-white">
+		<video class="absolute left-0 top-0 -z-10 size-full object-cover" src={video01} autoplay loop muted playsinline></video>
+		<div class="container flex min-h-screen flex-col pb-24 pt-20">
+			<a class="grid self-start text-xs" href="/">
+				<strong>En ruta hacia…</strong>
+				<span>Un proyecto de</span>
+				<Icon class="mt-2 w-40" name="continental" />
+			</a>
+			<h1 class="m-auto grid max-w-md gap-2 text-center">
+				<span class="text-4xl font-bold reveal:translate-y-48 reveal:opacity-0 revealed:delay-200">En cualquier momento, en cualquier clima,</span>
+				<strong class="font-serif text-5xl text-[#729BD6] reveal:translate-y-48 reveal:opacity-0 revealed:delay-400">el mejor neumático</strong>
+			</h1>
+		</div>
+	</section>
+
+	<section class="overflow-clip bg-[#F8EFE0] py-24">
+		<div class="reveal container">
+			<p class="mx-auto max-w-2xl text-pretty text-center font-bold reveal:translate-y-48 reveal:opacity-0">La carretera es impredecible. Un día puedes disfrutar unas temperaturas más moderadas y, al siguiente, enfrentándote a una tormenta inesperada o a temperaturas heladas. Lo único constante es que tus neumáticos serán tus mejores aliados para mantener la seguridad, la eficiencia y el confort en cualquier trayecto. Ya sea viajando bajo un sol radiante o en condiciones climáticas adversas, elegir y cuidar tus neumáticos es clave.</p>
+		</div>
+	</section>
+
+	<section class="reveal grid overflow-clip bg-black text-center md:grid-cols-2">
+		<a class="relative flex aspect-square flex-col items-center justify-center gap-8 p-8 reveal:-translate-x-48 reveal:opacity-0" href="/dias-de-calor">
+			<video class="absolute left-0 top-0 -z-10 size-full object-cover opacity-40" src={video02} autoplay loop muted playsinline></video>
+			<h2 class="max-w-xs font-serif text-5xl text-[#FCB134]">Días de calor</h2>
+			<h3 class="max-w-md text-3xl font-bold text-white">En cualquier momento, cómo proteger tu coche de las altas temperaturas</h3>
+		</a>
+		<a class="relative flex aspect-square flex-col items-center justify-center gap-8 p-8 reveal:translate-x-48 reveal:opacity-0" href="/carretera-bajo-lluvia">
+			<video class="absolute left-0 top-0 -z-10 size-full object-cover opacity-40" src={video03} autoplay loop muted playsinline></video>
+			<h2 class="max-w-xs font-serif text-5xl text-[#FCB134]">Carretera bajo la lluvia</h2>
+			<h3 class="max-w-sm text-3xl font-bold text-white">Viaja en coche con la mayor seguridad</h3>
+		</a>
+	</section>
+</Layout>

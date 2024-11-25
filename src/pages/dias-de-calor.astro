@@ -1,0 +1,42 @@
+---
+import LayoutPage from '$layouts/LayoutPage.astro'
+import BlockSplit from '$components/BlockSplit.astro'
+import video from '$assets/videos/video-02.mp4'
+import img01 from '$assets/images/01.jpg'
+import img02 from '$assets/images/02.gif'
+import img03 from '$assets/images/03.gif'
+import img04 from '$assets/images/04.png'
+---
+
+<LayoutPage {video} title="Días de calor" subtitle="En cualquier momento, cómo proteger tu coche de las altas temperaturas" description="Los días con temperaturas moderadas invitan a viajar con tranquilidad, pero no por ello debes descuidar tus neumáticos. Incluso en condiciones normales, elegir el modelo adecuado puede marcar la diferencia en la comodidad y el rendimiento de tu vehículo.">
+	<BlockSplit image={img01} title="Neumáticos recomendados para buen tiempo" reverse>
+		<ul class="grid list-disc gap-4 pl-6">
+			<li><strong>PremiumContact:</strong> Si buscas un manejo preciso en carreteras secas y mojadas, esta gama ofrece una experiencia premium, con seguridad y estabilidad en cada curva.</li>
+			<li><a class="font-bold text-[#FCB134] underline" rel="sponsored" rel="sponsored" target="_blank" href="https://www.continental-neumaticos.es/b2c/car/">UltraContact NXT:</a> Perfectos para quienes valoran la sostenibilidad, ya que combinan materiales reciclados con un rendimiento excepcional. Además, su diseño minimiza el ruido, haciendo que cada trayecto sea más placentero.</li>
+		</ul>
+	</BlockSplit>
+
+	<BlockSplit image={img02} title="Consejos básicos para tus trayectos en condiciones normales">
+		<ol class="grid list-decimal gap-4 pl-6">
+			<li><strong class="text-[#729BD6]">Mantén la presión correcta:</strong> Unos neumáticos bien inflados garantizan una conducción más segura y eficiente, además de ahorrar combustible.</li>
+			<li><strong class="text-[#729BD6]">Verifica la banda de rodadura:</strong> Aunque el mínimo legal es de 1,6 mm, un grosor superior mejora notablemente la seguridad.</li>
+			<li><strong class="text-[#729BD6]">Revisa el neumático de repuesto:</strong> Asegúrate de que está en buen estado por si lo necesitas.</li>
+			<li><strong class="text-[#729BD6]">Evita sobrecargar tu vehículo:</strong> Un peso excesivo puede desgastar tus neumáticos y comprometer su rendimiento.</li>
+		</ol>
+		<p>Con estas precauciones, estarás listo para disfrutar del camino con tranquilidad y confianza, aprovechando al máximo los días de buen tiempo.</p>
+	</BlockSplit>
+
+	<BlockSplit image={img03} title="La solución todo en uno: neumáticos para cualquier estación" reverse>
+		<p>Si no quieres preocuparte por cambiar neumáticos cada temporada, los modelos todo tiempo como el <a class="font-bold text-[#FCB134] underline" target="_blank" href="https://www.continental-neumaticos.es/b2c/car/tires/allseasoncontact-2/">AllSeasonContact 2</a> son una excelente opción. Ofrecen:</p>
+		<ul class="grid list-disc gap-4 pl-6">
+			<li><strong class="text-[#729BD6]">Rendimiento versátil:</strong> Funcionan bien tanto en días soleados como en lluvia o nieve ligera.</li>
+			<li><strong class="text-[#729BD6]">Mayor seguridad:</strong> Diseñados para mantener el agarre y la tracción en temperaturas extremas.</li>
+			<li><strong class="text-[#729BD6]">Durabilidad y eficiencia:</strong> Su larga vida útil los convierte en una inversión práctica y económica.</li>
+		</ul>
+	</BlockSplit>
+
+	<BlockSplit image={img04} title="No lo olvides: tu seguridad depende de tus neumáticos">
+		<p>El clima puede cambiar, pero tu preparación no debería hacerlo. Desde días de buen tiempo hasta condiciones adversas, los neumáticos son tu mejor herramienta para enfrentar cualquier trayecto. Con opciones de alta calidad como las que ofrece <strong>Continental</strong> y siguiendo estos consejos, estarás preparado para conducir con seguridad, confort y eficiencia, sin importar lo que te depare la carretera.</p>
+		<p>Haz de tus neumáticos tus aliados y convierte cada viaje en una experiencia segura y placentera.</p>
+	</BlockSplit>
+</LayoutPage>
