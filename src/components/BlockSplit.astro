@@ -12,7 +12,7 @@ const { image, title, reverse } = Astro.props
 
 <div class="reveal mt-24 grid items-center gap-8 overflow-hidden md:grid-cols-2 xl:gap-24">
 	<div class:list={[reverse ? 'reveal:translate-x-48 reveal:opacity-0 md:order-2' : 'reveal:-translate-x-48 reveal:opacity-0']}>
-		<Image class="aspect-[4/3] w-full object-cover" src={image} width={744} quality={90} densities={[2]} alt="" />
+		<Image class="w-full object-cover" src={image} width={744} quality={90} densities={[2]} alt="" />
 	</div>
 	<div class:list={[reverse ? 'reveal:-translate-x-48 reveal:opacity-0' : 'reveal:translate-x-48 reveal:opacity-0']}>
 		<div class="grid gap-8">
