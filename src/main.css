@@ -4,32 +4,33 @@
 
 @layer base {
 	@font-face {
-		font-family: 'TT Wellingtons Trial';
+		scroll-behavior: smooth;
+		font-family: 'Krub';
 		font-style: normal;
 		font-weight: 400;
 		font-display: 'swap';
-		src: url(./assets/fonts/TT-Wellingtons-Trial-Regular.woff2) format('woff2');
+		src: url(./assets/fonts/krub/Krub-Italic.woff2) format('woff2');
 	}
 	@font-face {
-		font-family: 'TT Wellingtons Trial';
-		font-style: normal;
-		font-weight: 500;
+		font-family: 'Krub';
+		font-style: italic;
+		font-weight: bold;
 		font-display: 'swap';
-		src: url(./assets/fonts/TT-Wellingtons-Trial-Medium.woff2) format('woff2');
+		src: url(./assets/fonts/krub/Krub-BoldItalic.woff2) format('woff2');
 	}
 	@font-face {
-		font-family: 'TT Wellingtons Trial';
+		font-family: 'Krub';
 		font-style: normal;
 		font-weight: 700;
 		font-display: 'swap';
-		src: url(./assets/fonts/TT-Wellingtons-Trial-Bold.woff2) format('woff2');
+		src: url(./assets/fonts/krub/Krub-Bold.woff2) format('woff2');
 	}
 	@font-face {
-		font-family: 'Protest Guerrilla';
+		font-family: 'llrg';
 		font-style: normal;
 		font-weight: 400;
 		font-display: 'swap';
-		src: url(./assets/fonts/Protest-Guerrilla-Regular.woff2) format('woff2');
+		src: url(./assets/fonts/LLRG/LLRG.woff) format('woff');
 	}
 	@media (max-width: 400px) {
 		html {
@@ -62,6 +63,15 @@
 
 @layer utilities {
 	.bg-image {
-		background-image: url(./assets/images/bg.webp);
+		background-image: url(./assets/images/bg-1.webp);
+	}
+	.bg-image2 {
+		background-image: url(./assets/images/bg-2.webp);
+	}
+	.bg-image3 {
+		background-image: url(./assets/images/bg-3.webp);
+	}
+	body {
+		@apply scroll-smooth;
 	}
 }
